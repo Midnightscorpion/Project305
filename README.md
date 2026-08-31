@@ -59,12 +59,11 @@ The model will be developed in the following stages:
 
    Determine whether each hour experiences a loss of load:
 
+   $$L_t = \begin{cases}
+   1, & G_t + B_t < D_t \\
+   0, & G_t + B_t \geq D_t
+   \end{cases}
    $$
-   L_t = \begin{cases} 
-	 1, & G_t + B_t < D_t \\
-	 0, & G_t + B_t \geq D_t
-	 \end{cases}
-	 $$
 
    and estimate:
 
