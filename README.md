@@ -31,9 +31,10 @@ where:
 The model will be developed in the following stages:
 
 1. **Define the probability space**
+   
    Model hourly realizations of renewable generation and consumer demand.
 
-2. **Model renewable uncertainty**
+3. **Model renewable uncertainty**
 
    Wind speed:
 
@@ -43,19 +44,19 @@ The model will be developed in the following stages:
 
    $$S_t\sim Beta(\alpha,\beta)$$
 
-3. **Model renewable generation**
+4. **Model renewable generation**
 
    Convert wind speed and solar irradiance into hourly wind and solar power output:
 
    $$G_t=P_t^{wind}+P_t^{solar}$$
 
-4. **Model battery storage**
+5. **Model battery storage**
 
    Represent battery state-of-charge as a stochastic process / discrete Markov chain:
 
    $$SOC_{t+1}=f(SOC_t,G_t,D_t)$$
 
-5. **Evaluate reliability**
+6. **Evaluate reliability**
 
    Determine whether each hour experiences a loss of load:
 
