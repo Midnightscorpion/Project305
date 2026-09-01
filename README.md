@@ -48,7 +48,7 @@ The model will be developed in the following stages:
 
    Convert wind speed and solar irradiance into hourly wind and solar power output:
 
-   $$G_t=P_t^{wind}+P_t^{solar}$$
+   $$G_t=W_t + S_t$$
 
 5. **Model battery storage**
 
@@ -60,14 +60,12 @@ The model will be developed in the following stages:
 
    Determine whether each hour experiences a loss of load:
 
-   $$I_t = \begin{cases}
-   1, & G_t + B_t \leq D_t \\
-   0, & G_t + B_t \geq D_t\
-   end{cases}$$
+   I_t = { 1  if G_t B_t ≤ D_t \\\\
+         { 0  if G_t B_t ≥ D_t
 
    and estimate:
 
-   $$\bar{L_t}=\frac{1}{T}\sum_{t=1}^{T}L_t$$
+   $$\bar{L_T}=\frac{1}{T}\sum_{t=1}^{T}I_t$$
 
 8. **Apply probability and statistical methods**
 
