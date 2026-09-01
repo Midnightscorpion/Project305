@@ -61,23 +61,22 @@ The model will be developed in the following stages:
    Determine whether each hour experiences a loss of load:
 
    $$L_t = \begin{cases}
-   1, & G_t + B_t \leq D_t \\
-   0, & G_t + B_t \geq D_t
-   \end{cases}
-   $$
+   1, & G_t + B_t\leq D_t\\
+   0, & G_t + B_t\geq D_t\
+   end{cases}$$
 
    and estimate:
 
    $$\widehat{LOLP}=\frac{1}{T}\sum_{t=1}^{T}L_t$$
 
-7. **Apply probability and statistical methods**
+8. **Apply probability and statistical methods**
 
    * Central Limit Theorem (CLT)
    * Chebyshev's Inequality
    * Hypothesis testing
    * Markov chains
 
-8. **Compare scenarios**
+9. **Compare scenarios**
 
    Compare LOLP for different battery capacities and demand-management strategies.
 
