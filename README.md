@@ -8,7 +8,7 @@ This project develops a probabilistic model of a renewable-energy grid with batt
 
 The central reliability measure is the **Loss-of-Load Probability (LOLP)**:
 
-$$L_t=P(G_t+B_t\leq D_t)$$
+$$P_t=P(G_t+B_t\leq D_t)$$
 
 where:
 
@@ -67,7 +67,7 @@ The model will be developed in the following stages:
 
    and estimate:
 
-   $$\widehat{LOLP}=\frac{1}{T}\sum_{t=1}^{T}L_t$$
+   $$\bar{L_t}=\frac{1}{T}\sum_{t=1}^{T}L_t$$
 
 8. **Apply probability and statistical methods**
 
