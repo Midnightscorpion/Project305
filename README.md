@@ -8,7 +8,7 @@ This project develops a probabilistic model of a renewable-energy grid with batt
 
 The central reliability measure is the **Loss-of-Load Probability (LOLP)**:
 
-$$LOLP=P(G_t+B_t\leq D_t)$$
+$$L_t=P(G_t+B_t\leq D_t)$$
 
 where:
 
@@ -54,15 +54,15 @@ The model will be developed in the following stages:
 
    Represent battery state-of-charge as a stochastic process / discrete Markov chain:
 
-   $$SOC_{t+1}=f(SOC_t,G_t,D_t)$$
+   $$B_{t+1}=f(B_t,G_t,D_t)$$
 
 6. **Evaluate reliability**
 
    Determine whether each hour experiences a loss of load:
 
-   $$L_t = \begin{cases}
-   1, & G_t + B_t\leq D_t\\
-   0, & G_t + B_t\geq D_t\
+   $$I_t = \begin{cases}
+   1, & G_t + B_t \leq D_t \\
+   0, & G_t + B_t \geq D_t\
    end{cases}$$
 
    and estimate:
